@@ -3,10 +3,10 @@ class TV:
 
     def __init__(self, marca, estado):
         self._marca = marca
-        self.canal = 1
+        self._canal = 1
         self._precio = 500
-        self.estado = estado
-        self.volumen = 1
+        self._estado = estado
+        self._volumen = 1
         self._control = None
         TV.numTV += 1
 
@@ -17,17 +17,17 @@ class TV:
 
 
     def setCanal(self, canal):
-        if self.estado == True and canal >= 1 and canal <= 120:
-                self.canal = canal
+        if self._estado == True and canal >= 1 and canal <= 120:
+                self._canal = canal
     def getCanal(self):
-        return self.canal
+        return self._canal
     
     def canalUp(self):
-        if self.estado == True and self.canal < 120:
-                self.canal = self.canal + 1
+        if self._estado == True and self._canal < 120:
+                self._canal = self._canal + 1
     def canalDown(self):
-        if self.estado == True and self.canal > 1:
-                self.canal = self.canal - 1
+        if self._estado == True and self._canal > 1:
+                self._canal = self._canal - 1
     
     def setPrecio(self, precio):
         self._precio = precio
@@ -36,18 +36,18 @@ class TV:
     
 
     def setVolumen(self, volumen):
-        if self.estado == True and volumen >= 0 and volumen <=7:
-            self.volumen = volumen
+        if self._estado == True and volumen >= 0 and volumen <=7:
+            self._volumen = volumen
 
     def getVolumen(self):
-        return self.volumen
+        return self._volumen
     
     def volumenUp(self):
-        if self.estado == True and self.volumen < 7:
-            self.volumen = self.volumen + 1
+        if self._estado == True and self._volumen < 7:
+            self._volumen = self._volumen + 1
     def volumenDown(self):
-        if self.estado == True and self.volumen > 1:
-            self.volumen = self.volumen - 1
+        if self._estado == True and self._volumen > 1:
+            self._volumen = self._volumen - 1
         
 
     def setControl(self, control):
@@ -64,8 +64,8 @@ class TV:
     
 
     def turnOn(self):
-        self.estado = True
+        self._estado = True
     def turnOff(self):
-        self.estado = False
+        self._estado = False
     def getEstado(self):
-        return self.estado
+        return self._estado
