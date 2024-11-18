@@ -42,8 +42,10 @@ class TV:
         if self.estado == True:
             if volumen >= 0 and volumen <=7:
                 self.volumen = volumen
+
     def getVolumen(self):
         return self.volumen
+    
     def volumenUp(self):
         if self.estado == True:
             if self.volumen < 7:
