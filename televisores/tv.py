@@ -35,9 +35,9 @@ class TV:
         return self._precio
     
 
-    def setVolumen(self, volumen):
-        if volumen >= 0 and volumen <=7 and self._estado == True:
-            self._volumen = volumen
+    def setVolumen(self, Volumen):
+        if Volumen >= 0 and Volumen <= 7 and self._estado == True:
+            self._volumen = Volumen 
 
     def getVolumen(self):
         return self._volumen
@@ -46,7 +46,7 @@ class TV:
         if self._volumen < 7 and self._estado == True:
             self._volumen = self._volumen + 1
     def volumenDown(self):
-        if self._volumen > 0 and self._estado == True:
+        if self._estado == True and self._volumen > 0:
             self._volumen = self._volumen - 1
         
 
